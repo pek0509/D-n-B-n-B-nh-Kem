@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>Tìm kiếm</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../HinhAnh/logo.png">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+   <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/all.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="../CSS/owl.carousel.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="../CSS/magnific-popup.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="../CSS/animate.css">
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="../CSS/meanmenu.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="../CSS/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="../CSS/responsive.css">
+
+    <style>
+        .search-page-breadcrumb {
+            background-image: linear-gradient(rgba(255, 246, 227, 0.14), rgba(255, 246, 227, 0.22)), url('https://the350f.com/wp-content/uploads/2025/05/image-2-1-1.jpg');
+            background-size: cover;
+            background-position: center center;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+        }
+        .search-page-breadcrumb:after {
+            background: linear-gradient(180deg, rgba(8, 20, 18, 0.18) 0%, rgba(18, 35, 28, 0.12) 42%, rgba(255, 241, 215, 0.18) 100%);
+            opacity: 1;
+        }
+        .search-page-breadcrumb .breadcrumb-text {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            padding: 26px 42px 30px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(18, 30, 28, 0.46), rgba(11, 20, 19, 0.34));
+            border: 1px solid rgba(255, 244, 224, 0.14);
+            box-shadow: 0 24px 70px rgba(8, 12, 11, 0.28);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .search-page-breadcrumb .breadcrumb-text p {
+            color: #ffc551;
+            margin-bottom: 0;
+            text-shadow: 0 8px 24px rgba(20, 22, 18, 0.28);
+        }
+        .search-page-breadcrumb .breadcrumb-text h1 {
+            color: #fffdf7;
+            margin-bottom: 0;
+            text-shadow: 0 14px 32px rgba(17, 22, 19, 0.22);
+        }
+        .search-results-shell {
+            padding: 110px 0 120px;
+        }
+        .header__search-result {
+            font-size: 42px;
+            color: #051922;
+            margin-bottom: 14px;
+        }
+        .search-result-summary {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .search-empty-message {
+            font-size: 18px;
+            color: #c9461c;
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+        .product-page {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.product-page > div.d-none {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    flex: 0 0 0 !important;
+}
+    </style>
+</head>
+<body>
+
+<div class="loader">
+    <div class="loader-inner">
+        <div class="circle"></div>
+    </div>
+</div>
+
+<div class="top-header-area" id="sticker">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 text-center">
+                <div class="main-menu-wrap">
+                    <div class="site-logo">
+                        <a href="index.html">
+                            <img src="../HinhAnh/logo.png" alt="logo" width="75">
+                        </a>
+                    </div>
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                            <li><a href="tintuc.html">Tin Tức</a></li>
+                            <li><a href="lienhe.html">Liên Hệ</a></li>
+                            <li class="dropdown">
+                              <a class="dropdown-toggle" href="sanpham.html" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh mục sản phẩm</a>
+                               <div class="dropdown-menu" aria-labelledby="productDropdown">
+                                  <a class="dropdown-item" href="sanpham.html#tiramisu">Tiramisu</a>
+                                  <a class="dropdown-item" href="sanpham.html#banh-kem">Bánh kem</a>
+                                  <a class="dropdown-item" href="sanpham.html#banh-hop-thiec">Bánh hộp thiếc</a>
+                                  <a class="dropdown-item" href="sanpham.html#banh-nuong">Bánh nướng</a>
+                                  <a class="dropdown-item" href="sanpham.html#thuc-uong">Thức uống</a>
+                                  <a class="dropdown-item" href="sanpham.html#khac">Khác</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-icons">
+                                    <a class="shopping-cart" href="giohang.html"><i class="fas fa-shopping-cart"></i></a>
+                                    <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                    <div class="user-icon">
+                                        <label for="user-icon-input"><i class="fa-solid fa-user"></i></label>
+                                        <input style="display: none;" type="checkbox" id="user-icon-input">
+                                        <div class="dropdown-user-info">
+                                            <div class="dropdown-user-info-name">Tài khoản: <span id="display-username">Đang tải...</span></div>
+                                            <div class="dropdown-user-info-email">Email: <span id="display-email">Đang tải...</span></div>
+                                            <div class="dropdown-user-info-history"><a href="lichsumuahang.html" class="history__link">Xem lịch sử giỏ hàng</a></div>
+                                            <div class="dropdown-user-info-logout"><i class="fa-solid fa-right-from-bracket"></i><a href="dangnhap.html">Đăng Nhập</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="close-btn"><i class="fas fa-window-close"></i></span>
+                <div class="search-bar">
+                    <div class="search-bar-tablecell">
+                        <h3>Tìm kiếm:</h3>
+                        <input type="text" placeholder="Từ khóa">
+                        <button type="button" class="search_link search-submit-btn">Tìm Kiếm <i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="breadcrumb-section breadcrumb-bg search-page-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Tìm đúng vị bạn muốn</p>
+                    <h1>Tìm Kiếm Sản Phẩm</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search-results-shell">
+    <div class="container">
+        <h1 class="header__search-result">Kết quả tìm kiếm</h1>
+        <p class="search-result-summary"></p>
+        <p class="search-empty-message" style="display: none;">Không có sản phẩm đó.</p>
+        <div class="row product-lists product-page" id="product-page-1">
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_1.html"><img src="https://bakes-saigon.com/cdn/shop/files/RaspberryTiramisu_12cm_1x1_4675e77b-4af2-4799-9dc1-8b7a32d1991d.jpg?v=1775013367&width=1920" alt="Berry Bliss Tiramisu"></a></div>
+                    <h3>Berry Bliss Tiramisu</h3>
+                    <p class="product-price">480.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="1" data-product-name="Berry Bliss Tiramisu" data-product-price="480000" data-product-image="https://bakes-saigon.com/cdn/shop/files/RaspberryTiramisu_12cm_1x1_4675e77b-4af2-4799-9dc1-8b7a32d1991d.jpg?v=1775013367&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_2.html"><img src="https://bakes-saigon.com/cdn/shop/files/Matcha_Tiramisu_15cm_1x1_8504588d-2fce-43c8-b7c8-f38d93dfcf93.jpg?v=1775459263&width=1920" alt="Matcha Tiramisu"></a></div>
+                    <h3>Matcha Tiramisu</h3>
+                    <p class="product-price">630.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="2" data-product-name="Matcha Tiramisu" data-product-price="630000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Matcha_Tiramisu_15cm_1x1_8504588d-2fce-43c8-b7c8-f38d93dfcf93.jpg?v=1775459263&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_3.html"><img src="https://bakes-saigon.com/cdn/shop/files/ClassicTiramisu_15cm_11_104011e5-5ee3-41d8-8585-5b0fd09ff3bf.jpg?v=1775013117&width=1920" alt="Signature Espresso"></a></div>
+                    <h3>Signature Espresso</h3>
+                    <p class="product-price">600.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="3" data-product-name="Signature Espresso" data-product-price="600000" data-product-image="https://bakes-saigon.com/cdn/shop/files/ClassicTiramisu_15cm_11_104011e5-5ee3-41d8-8585-5b0fd09ff3bf.jpg?v=1775013117&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_4.html"><img src="https://bakes-saigon.com/cdn/shop/files/TiramisuLava_01_11.jpg?v=1775467962&width=1920" alt="Tiramisu Lava"></a></div>
+                    <h3>Tiramisu Lava</h3>
+                    <p class="product-price">135.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="4" data-product-name="Tiramisu Lava" data-product-price="135000" data-product-image="https://bakes-saigon.com/cdn/shop/files/TiramisuLava_01_11.jpg?v=1775467962&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_5.html"><img src="https://maisonmarou.com/cdn/shop/files/tiramisu-scaled.jpg?v=1750151944&width=960" alt="Marou Velvet Tiramisu"></a></div>
+                    <h3>Marou Velvet Tiramisu</h3>
+                    <p class="product-price">160.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="5" data-product-name="Marou Velvet Tiramisu" data-product-price="160000" data-product-image="https://maisonmarou.com/cdn/shop/files/tiramisu-scaled.jpg?v=1750151944&width=960"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_6.html"><img src="https://r2.cms.4handy.vn/set-classic-tiramisu-set9-1024x1024.jpg" alt="Set cốc Classic Tiramisu"></a></div>
+                    <h3>Set cốc Classic Tiramisu</h3>
+                    <p class="product-price">220.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="6" data-product-name="Set cốc Classic Tiramisu" data-product-price="220000" data-product-image="https://r2.cms.4handy.vn/set-classic-tiramisu-set9-1024x1024.jpg"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_7.html"><img src="https://bakes-saigon.com/cdn/shop/files/Chocolate_Hazelnut_Kiss_12cm_11_Brighter_BG.jpg?v=1775707246&width=1920" alt="Bánh Kem Chocolate Hazelnut Kiss"></a></div>
+                    <h3>Bánh Kem Chocolate Hazelnut Kiss</h3>
+                    <p class="product-price">495.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="7" data-product-name="Bánh Kem Chocolate Hazelnut Kiss" data-product-price="495000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Chocolate_Hazelnut_Kiss_12cm_11_Brighter_BG.jpg?v=1775707246&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_8.html"><img src="https://bakes-saigon.com/cdn/shop/files/B_nh_sinh_nh_t_Qu_t_v_Tr_B_T_c_Bakes_Saigon_size_12cm.jpg?v=1775638143&width=1920" alt="Bánh Sinh Nhật Quýt Trà Bá Tước"></a></div>
+                    <h3>Bánh Sinh Nhật Quýt Trà Bá Tước</h3>
+                    <p class="product-price">480.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="8" data-product-name="Bánh Sinh Nhật Quýt Trà Bá Tước" data-product-price="480000" data-product-image="https://bakes-saigon.com/cdn/shop/files/B_nh_sinh_nh_t_Qu_t_v_Tr_B_T_c_Bakes_Saigon_size_12cm.jpg?v=1775638143&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_9.html"><img src="https://bakes-saigon.com/cdn/shop/files/Fresh_Avocado_Mousse_12cm_copy.jpg?v=1775719018&width=1920" alt="Bánh Kem Bơ Tươi"></a></div>
+                    <h3>Bánh Kem Bơ Tươi</h3>
+                    <p class="product-price">480.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="9" data-product-name="Bánh Kem Bơ Tươi" data-product-price="480000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Fresh_Avocado_Mousse_12cm_copy.jpg?v=1775719018&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image"><a href="Product/product_10.html"><img src="https://bakes-saigon.com/cdn/shop/files/StrawberryNoBakedCheesecake_12cm_11.jpg?v=1775019367&width=1920" alt="Bánh Kem Cheesecake Dâu Xí Muội"></a></div>
+                    <h3>Bánh Kem Cheesecake Dâu Xí Muội</h3>
+                    <p class="product-price">400.000₫</p>
+                    <a href="../giohang.html" class="cart-btn" data-product-id="10" data-product-name="Bánh Kem Cheesecake Dâu Xí Muội" data-product-price="400000" data-product-image="https://bakes-saigon.com/cdn/shop/files/StrawberryNoBakedCheesecake_12cm_11.jpg?v=1775019367&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_11.html"><img src="https://the350f.com/wp-content/uploads/2025/05/5.2-DUBAI-THIEC.jpg" alt=""></a>
+						</div>
+						<h3>Pistachio Cake</h3>
+						<p class="product-price"> 295.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="11" data-product-name="Pistachio Cake" data-product-price="295000" data-product-image="https://the350f.com/wp-content/uploads/2025/05/5.2-DUBAI-THIEC.jpg"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+            <div class="col-lg-4 col-md-6 text-center">
+				<div class="single-product-item">
+					<div class="product-image">
+						<a href="Product/product_12.html"><img src="https://the350f.com/wp-content/uploads/2025/10/Dua-luoi-thiec-chi-tiet-4.jpg" alt=""></a>
+					</div>
+						<h3>Emerald Melon Cake</h3>
+						<p class="product-price"> 370.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="12" data-product-name="Emerald Melon Cake" data-product-price="370000" data-product-image="https://the350f.com/wp-content/uploads/2025/10/Dua-luoi-thiec-chi-tiet-4.jpg"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+				</div>
+			</div>
+            <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_13.html"><img src="https://the350f.com/wp-content/uploads/2025/07/Double-Cheese-Longan-1.jpg" alt=""></a>
+						</div>
+						<h3>Double Cheese Longan</h3>
+						<p class="product-price"> 275.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="13" data-product-name="Double Cheese Longan" data-product-price="275000" data-product-image="https://the350f.com/wp-content/uploads/2025/07/Double-Cheese-Longan-1.jpg"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+			</div>
+            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_14.html"><img src="https://the350f.com/wp-content/uploads/2026/01/CT-Cheese-1.2.jpg" alt=""></a>
+						</div>
+						<h3>Double Cheese Cake</h3>
+						<p class="product-price"> 225.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="14" data-product-name="Double Cheese Cake" data-product-price="225000" data-product-image="https://the350f.com/wp-content/uploads/2026/01/CT-Cheese-1.2.jpg"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+			</div>
+            <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_15.html"><img src="https://the350f.com/wp-content/uploads/2025/05/berry-1.jpg" alt=""></a>
+						</div>
+						<h3>Tiramisu Gold Version</h3>
+						<p class="product-price"> 340.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="15" data-product-name="Matcha Tiramisu" data-product-price="340000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Matcha_Tiramisu_15cm_1x1_8504588d-2fce-43c8-b7c8-f38d93dfcf93.jpg?v=1775459263&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+			</div>    
+			<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_16.html"><img src="https://the350f.com/wp-content/uploads/2025/08/Tira-gold-chi-tiet-3.jpg" alt=""></a>
+						</div>
+						<h3>Tiramisu Gold Version</h3>
+						<p class="product-price"> 200.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="16" data-product-name="Tiramisu Gold Version" data-product-price="200000" data-product-image="https://the350f.com/wp-content/uploads/2025/08/Tira-gold-chi-tiet-3.jpg"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+            <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_17.html"><img src="https://bakes-saigon.com/cdn/shop/files/CAPUCCINO_ICED.jpg?v=1771991859&width=1185" alt=""></a>
+						</div>
+						<h3>Cà Phê Cappuccino</h3>
+						<p class="product-price"> 55.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="17" data-product-name="Cà Phê Cappuccino" data-product-price="55000" data-product-image="https://bakes-saigon.com/cdn/shop/files/CAPUCCINO_ICED.jpg?v=1771991859&width=1185"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+            <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_18.html"><img src="https://bakes-saigon.com/cdn/shop/files/CAFE_S_A_COLD.jpg?crop=center&height=744&v=1771991946&width=670" alt=""></a>
+						</div>
+						<h3>Cà Phê Sữa</h3>
+						<p class="product-price"> 55.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="18" data-product-name="Cà Phê Sữa" data-product-price="55000" data-product-image="https://bakes-saigon.com/cdn/shop/files/CAFE_S_A_COLD.jpg?crop=center&height=744&v=1771991946&width=670"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_19.html"><img src="https://bakes-saigon.com/cdn/shop/files/AIYU_LEMON_ICED_TEA.jpg?v=1771989664&width=1153" alt=""></a>
+						</div>
+						<h3>Aiyu Jelly Lemon Iced Tea</h3>
+						<p class="product-price"> 60.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="19" data-product-name="Aiyu Jelly Lemon Iced Tea" data-product-price="60000" data-product-image="https://bakes-saigon.com/cdn/shop/files/AIYU_LEMON_ICED_TEA.jpg?v=1771989664&width=1153"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_20.html"><img src="https://bakes-saigon.com/cdn/shop/files/ESPRESSO_COLD.jpg?v=1771991165&width=1210" alt=""></a>
+						</div>
+						<h3>Cà Phê Espresso</h3>
+						<p class="product-price"> 50.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="20" data-product-name="Cà Phê Espresso" data-product-price="50000" data-product-image="https://bakes-saigon.com/cdn/shop/files/ESPRESSO_COLD.jpg?v=1771991165&width=1210"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_21.html"><img src="https://bakes-saigon.com/cdn/shop/files/CAFE_S_A_COLD.jpg?crop=center&height=744&v=1771991946&width=670" alt=""></a>
+						</div>
+						<h3>Cà Phê Latte</h3>
+						<p class="product-price"> 55.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="21" data-product-name="Cà Phê Latte" data-product-price="55000" data-product-image="https://bakes-saigon.com/cdn/shop/files/CAFE_S_A_COLD.jpg?crop=center&height=744&v=1771991946&width=670"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_22.html"><img src="https://bakes-saigon.com/cdn/shop/files/BAKES_CARAMEL_COFFEE_FRAPPE_11_Large_c2aa2af7-e21b-4c26-8a89-f7663aaba885.jpg?v=1771923546&width=1080" alt=""></a>
+						</div>
+						<h3>Bakes Caramel Coffee Frappe</h3>
+						<p class="product-price"> 65.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="22" data-product-name="Bakes Caramel Coffee Frappe" data-product-price="65000" data-product-image="https://bakes-saigon.com/cdn/shop/files/BAKES_CARAMEL_COFFEE_FRAPPE_11_Large_c2aa2af7-e21b-4c26-8a89-f7663aaba885.jpg?v=1771923546&width=1080"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_23.html"><img src="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Candle-HPBD.png" alt=""></a>
+						</div>
+						<h3>Candle HPBD</h3>
+						<p class="product-price">35.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="23" data-product-name="Candle HPBD" data-product-price="35000" data-product-image="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Candle-HPBD.png"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_24.html"><img src="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Blue-Fireworks.png" alt=""></a>
+						</div>
+						<h3>Blue Fireworks</h3>
+						<p class="product-price">25.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="24" data-product-name="Blue Fireworks" data-product-price="25000" data-product-image="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Blue-Fireworks.png"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_25.html"><img src="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Twisted-Candles.png" alt=""></a>
+						</div>
+						<h3>Candles</h3>
+						<p class="product-price">25.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="25" data-product-name="Candles" data-product-price="25000" data-product-image="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Twisted-Candles.png"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_26.html"><img src="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Twisted-Candles.png" alt=""></a>
+						</div>
+						<h3>Candles</h3>
+						<p class="product-price">25.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="26" data-product-name="Candles" data-product-price="25000" data-product-image="https://breadtalkvietnam.com/wp-content/uploads/2026/01/Twisted-Candles.png"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_27.html"><img src="https://down-vn.img.susercontent.com/file/b39e86fed854efb3b7ab5452bf13b8ed" alt=""></a>
+						</div>
+						<h3>Pháo phụt sinh nhật</h3>
+						<p class="product-price">10.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="27" data-product-name="Pháo phụt sinh nhật" data-product-price="10000" data-product-image="https://down-vn.img.susercontent.com/file/b39e86fed854efb3b7ab5452bf13b8ed"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_28.html"><img src="https://bakes-saigon.com/cdn/shop/files/TruffleCreamCheeseRoll_01_11.jpg?v=1775631624&width=1920" alt=""></a>
+						</div>
+						<h3>Truffle Cream Cheese Roll</h3>
+						<p class="product-price">85.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="28" data-product-name="Truffle Cream Cheese Roll" data-product-price="85000" data-product-image="https://bakes-saigon.com/cdn/shop/files/TruffleCreamCheeseRoll_01_11.jpg?v=1775631624&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_29.html"><img src="https://bakes-saigon.com/cdn/shop/files/Black_Truffle_Cheese_Croissant_01_11.jpg?v=1775632364&width=1920" alt=""></a>
+						</div>
+						<h3>Black Truffle Cheese Croissant</h3>
+						<p class="product-price">85.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="29" data-product-name="Black Truffle Cheese Croissant" data-product-price="85000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Black_Truffle_Cheese_Croissant_01_11.jpg?v=1775632364&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_30.html"><img src="https://bakes-saigon.com/cdn/shop/files/SaltedDuckEggCurdCroissant_01_11.jpg?v=1775632255&width=1920" alt=""></a>
+						</div>
+						<h3>Salted Duck Egg Curd Croissant</h3>
+						<p class="product-price">85.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="30" data-product-name="Salted Duck Egg Curd Croissant" data-product-price="85000" data-product-image="https://bakes-saigon.com/cdn/shop/files/SaltedDuckEggCurdCroissant_01_11.jpg?v=1775632255&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_31.html"><img src="https://bakes-saigon.com/cdn/shop/files/Bacon_Leek_Fondue_Pain_Suisse_01_11.jpg?v=1775631523&width=1920" alt=""></a>
+						</div>
+						<h3>Bacon Leek Fondue Pain Suisse</h3>
+						<p class="product-price">85.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="31" data-product-name="Bacon Leek Fondue Pain Suisse" data-product-price="85000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Bacon_Leek_Fondue_Pain_Suisse_01_11.jpg?v=1775631523&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_32.html"><img src="https://bakes-saigon.com/cdn/shop/files/Cafe_Cinnamon_Roll_01_11.jpg?v=1775631571&width=1920" alt=""></a>
+						</div>
+						<h3>Cafe Cinnamon Roll</h3>
+						<p class="product-price">75.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="32" data-product-name="Cafe Cinnamon Roll" data-product-price="75000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Cafe_Cinnamon_Roll_01_11.jpg?v=1775631571&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_33.html"><img src="https://bakes-saigon.com/cdn/shop/files/Croissant_01_11.jpg?v=1775632092&width=1920" alt=""></a>
+						</div>
+						<h3>Croissant</h3>
+						<p class="product-price">50.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="33" data-product-name="Croissant" data-product-price="50000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Croissant_01_11.jpg?v=1775632092&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_34.html"><img src="https://bakes-saigon.com/cdn/shop/files/Red_Velvet_01_11.jpg?v=1778028539&width=768" alt=""></a>
+						</div>
+						<h3>Bánh Kem Red Velvet Heart Cake</h3>
+						<p class="product-price"> 510.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="4" data-product-name="Bánh Kem Red Velvet Heart Cake" data-product-price="510000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Red_Velvet_01_11.jpg?v=1778028539&width=768"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="Product/product_35.html"><img src="https://bakes-saigon.com/cdn/shop/files/Opla_No_bake_cheesecake_01_1x1_01002a79-a09f-4a0f-ba52-470f59abe240.jpg?v=1775464003&width=1920" alt=""></a>
+						</div>
+						<h3>Bánh Ốp La Cheesecake </h3>
+						<p class="product-price"> 200.000₫ </p>
+						<a href="../giohang.html" class="cart-btn" data-product-id="1" data-product-name="Bánh Ốp La Cheesecake " data-product-price="200000" data-product-image="https://bakes-saigon.com/cdn/shop/files/Opla_No_bake_cheesecake_01_1x1_01002a79-a09f-4a0f-ba52-470f59abe240.jpg?v=1775464003&width=1920"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
+					</div>
+				</div>  
+            
+
+            
+        </div>
+    </div>
+</div>
+
+<div class="footer-area balanced-footer">
+        <!-- NOTE: Anh banh dat de len duong giao giua nen trang va footer den. -->
+        <img src="../HinhAnh/banh2-removebg-preview.png" class="img-tach-nen" alt="Banh trang tri footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-box about-widget">
+                        <h2 class="widget-title">Về chúng tôi</h2>
+                    <!-- Logo được thêm vào đây, bên dưới chữ "Nhóm 4" -->
+                    <div class="footer-logo-inline">
+                        <img src="../HinhAnh/logo.png" alt="Donkery Logo">
+                        <p class="footer-description">Donkery mang đến những chiếc bánh thơm ngon, 
+                        chỉn chu và đầy tâm huyết</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-box get-in-touch">
+                        <h2 class="widget-title">Liên hệ</h2>
+                        <ul>
+                           <li>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Hồ Chí Minh</li>
+                            <li>Donkery@gmail.com</li>
+                            <li>+8498992485</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-box pages">
+                        <h2 class="widget-title">Trang</h2>
+                        <ul>
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="gioithieu.html">Giới thiệu</a></li>
+							<li><a href="sanpham.html">Cửa hàng</a></li>
+                            <li><a href="tintuc.html">Tin tức</a></li>
+                            <li><a href="lienhe.html">Liên hệ</a></li>
+                            <li><a href="Sitemap.html">Sơ đồ trang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                <!-- NOTE: Tra Social Gallery ve lai cot thu 4 cua footer. -->
+                    <div class="footer-box">
+                        <div class="social-gallery-wrapper">
+                            <h2 class="widget-title" style="margin-bottom: 20px;">Social Gallery</h2>
+                            <div class="social-gallery-circle">
+                                <div class="gallery-row">
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/banh-3.jpg" alt="Gallery 1">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/CT-Dua-2.jpg" alt="Gallery 2">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/tn-sm-2.jpg" alt="Gallery 3">
+                                    </a>
+                                </div>
+                                <div class="gallery-row">
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/tn-sm-1.jpg" alt="Gallery 4">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/12/360-1761619620-6885-1761619797.webp" alt="Gallery 5">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/HinhAnh-4.jpg" alt="Gallery 6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <p>Bản quyền © 2026 - Donkery.</p>
+            </div>
+            <div class="col-lg-6 text-right col-md-12">
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="https://web.facebook.com/fined06?mibextid=wwXIfr&rdid=IM6S1j6EXaqcLVJM&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1GwLVTmF2B%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/heart2_dnga?igsh=MTAwMzE2cjM1bnIydQ==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.threads.com/@heart2_dnga?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fab fa-threads"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery -->
+<script src="../Script/jquery-1.11.3.min.js"></script>
+
+<!-- popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- bootstrap -->
+<script src="../Script/bootstrap.min.js"></script>
+
+<!-- count down -->
+<script src="../Script/jquery.countdown.js"></script>
+
+<!-- isotope -->
+<script src="../Script/jquery.isotope-3.0.6.min.js"></script>
+
+<!-- waypoints -->
+<script src="../Script/waypoints.js"></script>
+
+<!-- owl carousel -->
+<script src="../Script/owl.carousel.min.js"></script>
+
+<!-- magnific popup -->
+<script src="../Script/jquery.magnific-popup.min.js"></script>
+
+<!-- mean menu -->
+<script src="../Script/jquery.meanmenu.min.js"></script>
+
+<!-- sticker js -->
+<script src="../Script/sticker.js"></script>
+
+<!-- main js -->
+<script src="../Script/main.js"></script>
+</body>
+</html>
