@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sơ Đồ Trang - Donkery</title>
+
+    <link rel="shortcut icon" type="image/png" href="../HinhAnh/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/owl.carousel.css">
+    <link rel="stylesheet" href="../CSS/magnific-popup.css">
+    <link rel="stylesheet" href="../CSS/animate.css">
+    <link rel="stylesheet" href="../CSS/meanmenu.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+
+<body>
+
+    <!-- Tải trước -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- tiêu đề -->
+    <div class="top-header-area" id="sticker">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 text-center">
+                    <div class="main-menu-wrap">
+                        <div class="site-logo">
+                            <a href="index.html">
+                                <img src="../HinhAnh/logo.png" alt="" width="75">
+                            </a>
+                        </div>
+                        <!-- logo -->
+
+                        <!-- menu bắt đầu -->
+                        <nav class="main-menu">
+                            <ul>
+                                <li><a href="index.html">Trang Chủ</a></li>
+                                <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                                <li><a href="tintuc.html">Tin Tức</a></li>
+                                <li><a href="lienhe.html">Liên Hệ</a></li>
+                                <!--Bắt đầu header-->
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="sanpham.html" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Danh mục sản phẩm
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="productDropdown">
+                                        <a class="dropdown-item" href="sanpham.html#tiramisu">Tiramisu</a>
+                                        <a class="dropdown-item" href="sanpham.html#banh-kem">Bánh kem</a>
+                                        <a class="dropdown-item" href="sanpham.html#banh-hop-thiec">Bánh hộp thiếc</a>
+                                        <a class="dropdown-item" href="sanpham.html#banh-nuong">Bánh nướng</a>
+                                        <a class="dropdown-item" href="sanpham.html#thuc-uong">Thức uống</a>
+                                        <a class="dropdown-item" href="sanpham.html#khac">Khác</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="header-icons">
+                                        <a class="shopping-cart" href="giohang.html"><i class="fas fa-shopping-cart"></i></a>
+                                        <a class="mobile-hide search-bar-icon" href="timkiem.html"><i class="fas fa-search"></i></a>
+                                        <!-- user -->
+                                        <div class="user-icon">
+                                            <label for="user-icon-input"><i class="fa-solid fa-user"></i></label>
+                                            <input style="display: none;" type="checkbox" id="user-icon-input">
+                                            <!--Bắt đầu thay đổi-->
+                                            <div class="dropdown-user-info">
+                                                <div class="dropdown-user-info-name">Tài khoản: <span id="display-username">Đang tải...</span></div>
+                                                <div class="dropdown-user-info-email">Email: <span id="display-email">Đang tải...</span></div>
+                                                <!--Kết thúc-->
+                                                <div class="dropdown-user-info-history">
+                                                    <label for="dropdown-user-info-history-input" class="dropdown-user-info-history-input-check">
+                                                        <a href="lichsumuahang.html" class="history__link">Xem lại lịch sử giỏ hàng</a>
+                                                    </label>
+                                                    <input type="checkbox" id="dropdown-user-info-history-input">
+                                                </div>
+                                                <div class="dropdown-user-info-logout">
+                                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                                    <a href="dangnhap.html" class="user-info__logout">Đăng Nhập</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a class="mobile-show search-bar-icon" href="timkiem.html"><i class="fas fa-search"></i></a>
+                        <div class="mobile-menu"></div>
+                        <!-- kết thúc menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    	<!-- khu vực tìm kiếm -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Tìm kiếm:</h3>
+							<input type="text" placeholder="Từ khóa">
+							<button type="button" class="search_link search-submit-btn">Tìm Kiếm <i
+									class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- kết thúc khu vực tìm kiếm -->
+
+    <!-- khu vực breadcrumb -->
+	<div class="breadcrumb-section breadcrumb-bg cart-breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>Sơ đồ trang web</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- kết thúc khu vực breadcrumb -->
+
+    <!-- ===== SITEMAP CONTENT ===== -->
+<div class="sitemap-section">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Cột 1 - Trang Chính -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sitemap-group-box">
+                    <h3><i class="fas fa-home"></i> Trang Chính</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="tintuc.html">Tin tức</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
+                        <li><a href="timkiem.html">Tìm kiếm</a></li>
+                        <li><a href="sitemap.html">Sơ đồ trang</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-group-box mt-4">
+                    <h3><i class="fas fa-user-circle"></i> Tài Khoản</h3>
+                    <ul>
+                        <li><a href="dangnhap.html">Đăng nhập</a></li>
+                        <li><a href="dangnhap.html#register">Đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cột 2 - Danh mục sản phẩm  -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sitemap-group-box">
+                     <h3><i class="fas fa-birthday-cake"></i> Danh Mục Sản Phẩm</h3>
+                    <ul class="sitemap-sublinks">
+                        <li><a href="sanpham.html#tiramisu"><i class="fas fa-angle-right"></i> Tiramisu</a></li>
+                        <li><a href="sanpham.html#banh-kem"><i class="fas fa-angle-right"></i> Bánh kem</a></li>
+                        <li><a href="sanpham.html#banh-hop-thiec"><i class="fas fa-angle-right"></i> Bánh hộp thiếc</a></li>
+                        <li><a href="sanpham.html#banh-nuong"><i class="fas fa-angle-right"></i> Bánh nướng</a></li>
+                        <li><a href="sanpham.html#thuc-uong"><i class="fas fa-angle-right"></i> Thức uống</a></li>
+                        <li><a href="sanpham.html#khac"><i class="fas fa-angle-right"></i> Khác</a></li>
+                        <li class="sublink-toggle-wrap" style="margin-top:8px;">
+                            <span class="sublink-toggle">
+                                <i class="fas fa-angle-right toggle-arrow"></i> Sản phẩm chi tiết (35)
+                            </span>
+                            <ul class="sublink-dropdown">
+                                <li><a href="Product/product_1.html"><i class="fas fa-angle-right"></i>Berry Bliss Tiramisu</a></li>
+                                <li><a href="Product/product_2.html"><i class="fas fa-angle-right"></i>Matcha Tiramisu</a></li>
+                                <li><a href="Product/product_3.html"><i class="fas fa-angle-right"></i>Signature Espresso</a></li>
+                                <li><a href="Product/product_4.html"><i class="fas fa-angle-right"></i>Tiramisu Lava</a></li>
+                                <li><a href="Product/product_5.html"><i class="fas fa-angle-right"></i>Marou Velvet Tiramisu</a></li>
+                                <li><a href="Product/product_6.html"><i class="fas fa-angle-right"></i> Set cốc Classic Tiramisu</a></li>
+                                <li><a href="Product/product_7.html"><i class="fas fa-angle-right"></i>Bánh Kem Chocolate Hazelnut Kiss</a></li>
+                                <li><a href="Product/product_8.html"><i class="fas fa-angle-right"></i> Bánh Sinh Nhật Quýt Trà Bá Tước</a></li>
+                                <li><a href="Product/product_9.html"><i class="fas fa-angle-right"></i> Bánh Kem Bơ Tươi</a></li>
+                                <li><a href="Product/product_10.html"><i class="fas fa-angle-right"></i> Bánh Kem Cheesecake Dâu Xí Muội</a></li>
+                                <li><a href="Product/product_11.html"><i class="fas fa-angle-right"></i> Pistachio Cake</a></li>
+                                <li><a href="Product/product_12.html"><i class="fas fa-angle-right"></i> Emerald Melon Cake</a></li>
+                                <li><a href="Product/product_13.html"><i class="fas fa-angle-right"></i> Double Cheese Longan</a></li>
+                                <li><a href="Product/product_14.html"><i class="fas fa-angle-right"></i> Double Cheese Cake</a></li>
+                                <li><a href="Product/product_15.html"><i class="fas fa-angle-right"></i> Merry Berry</a></li>
+                                <li><a href="Product/product_17.html"><i class="fas fa-angle-right"></i> Cà Phê Cappuccino</a></li>
+                                <li><a href="Product/product_18.html"><i class="fas fa-angle-right"></i> Cà Phê Sữa</a></li>
+                                <li><a href="Product/product_19.html"><i class="fas fa-angle-right"></i> Aiyu Jelly Lemon Iced Tea</a></li>
+                                <li><a href="Product/product_20.html"><i class="fas fa-angle-right"></i> Cà Phê Espresso</a></li>
+                                <li><a href="Product/product_21.html"><i class="fas fa-angle-right"></i> Cà Phê Latte</a></li>
+                                <li><a href="Product/product_22.html"><i class="fas fa-angle-right"></i> Bakes Caramel Coffee Frappe</a></li>
+                                <li><a href="Product/product_23.html"><i class="fas fa-angle-right"></i> Candle HPBD</a></li>
+                                <li><a href="Product/product_24.html"><i class="fas fa-angle-right"></i> Blue Fireworks</a></li>
+                                <li><a href="Product/product_25.html"><i class="fas fa-angle-right"></i> Cone Hat</a></li>
+                                <li><a href="Product/product_26.html"><i class="fas fa-angle-right"></i> Candles</a></li>
+                                <li><a href="Product/product_27.html"><i class="fas fa-angle-right"></i> Pháo phụt sinh nhật</a></li>
+                                <li><a href="Product/product_28.html"><i class="fas fa-angle-right"></i> Truffle Cream Cheese Roll</a></li>
+                                <li><a href="Product/product_29.html"><i class="fas fa-angle-right"></i> Black Truffle Cheese Croissant</a></li>
+                                <li><a href="Product/product_30.html"><i class="fas fa-angle-right"></i> Salted Duck Egg Curd Croissant</a></li>
+                                <li><a href="Product/product_31.html"><i class="fas fa-angle-right"></i> Bacon & Leek Fondue Pain Suisse</a></li>
+                                <li><a href="Product/product_32.html"><i class="fas fa-angle-right"></i> Cafe Cinnamon Roll</a></li>
+                                <li><a href="Product/product_33.html"><i class="fas fa-angle-right"></i> Croissant</a></li>
+                                <li><a href="Product/product_34.html"><i class="fas fa-angle-right"></i> Bánh Kem Red Velvet Heart Cake</a></li>
+                                <li><a href="Product/product_35.html"><i class="fas fa-angle-right"></i> Bánh Ốp La Cheesecake</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cột 3 - Tin tức (kiểu card cũ) -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sitemap-group-box">
+                         <h3><i class="fas fa-newspaper"></i>Tin Tức & Bài Viết</h3>
+                    <ul class="sitemap-sublinks">
+                        <li class="sublink-toggle-wrap" style="margin-top:8px;">
+                            <span class="sublink-toggle">
+                                <i class="fas fa-angle-right toggle-arrow"></i> Bài viết nổi bật (3)
+                            </span>
+                            <ul class="sublink-dropdown">
+                                <li><a href="Tintuc/Baiviet_1.html"><i class="fas fa-angle-right"></i>Những dòng bánh best-seller của Donkery</a></li>
+                                <li><a href="Tintuc/Baiviet_2.html"><i class="fas fa-angle-right"></i>Cách chọn bánh phù hợp</a></li>
+                                <li><a href="Tintuc/Baiviet_3.html"><i class="fas fa-angle-right"></i> Xu hướng bánh ngọt 2023</a></li>
+                            </ul>
+                        </li>
+                        <li class="sublink-toggle-wrap" style="margin-top:8px;">
+                            <span class="sublink-toggle">
+                                <i class="fas fa-angle-right toggle-arrow"></i> Tin tức (6)
+                            </span>
+                            <ul class="sublink-dropdown">
+                                <li><a href="Tintuc/Tintuc_1.html"><i class="fas fa-angle-right"></i>Cập nhật chính sách</a></li>
+                                <li><a href="Tintuc/Tintuc_2.html"><i class="fas fa-angle-right"></i>Hướng dẫn đặt bánh online</a></li>
+                                <li><a href="Tintuc/Tintuc_3.html"><i class="fas fa-angle-right"></i>Chương trình khách hàng thân thiết - Tích điểm đổi quà</a></li>
+                                <li><a href="Tintuc/Tintuc_4.html"><i class="fas fa-angle-right"></i>Thông báo lịch nghỉ lễ 30/4 và 1/5/2026</a></li>
+                                <li><a href="Tintuc/Tintuc_5.html"><i class="fas fa-angle-right"></i>Cập nhật thêm phương thức thanh toán</a></li>
+                                <li><a href="Tintuc/Tintuc_6.html"><i class="fas fa-angle-right"></i>Chính sách bảo mật</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Cột Mua Hàng -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sitemap-group-box">
+                    <h3><i class="fas fa-shopping-bag"></i> Mua Hàng</h3>
+                    <ul>
+                        <li><a href="giohang.html">Giỏ hàng</a></li>
+                        <li><a href="thanhtoan.html">Thanh toán</a></li>
+                        <li><a href="lichsumuahang.html">Lịch sử mua hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end sitemap section -->
+
+    <!-- footer -->
+  <div class="footer-area balanced-footer">
+        <!-- NOTE: Anh banh dat de len duong giao giua nen trang va footer den. -->
+        <img src="../HinhAnh/banh2-removebg-preview.png" class="img-tach-nen" alt="Banh trang tri footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-box about-widget">
+                        <h2 class="widget-title">Về chúng tôi</h2>
+                    <!-- Logo được thêm vào đây, bên dưới chữ "Nhóm 4" -->
+                    <div class="footer-logo-inline">
+                        <img src="../HinhAnh/logo.png" alt="Donkery Logo">
+                        <p class="footer-description">Donkery mang đến những chiếc bánh thơm ngon, 
+                        chỉn chu và đầy tâm huyết</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-box get-in-touch">
+                        <h2 class="widget-title">Liên hệ</h2>
+                        <ul>
+                           <li>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Hồ Chí Minh</li>
+                            <li>Donkery@gmail.com</li>
+                            <li>+8498992485</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-box pages">
+                        <h2 class="widget-title">Trang</h2>
+                        <ul>
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="gioithieu.html">Giới thiệu</a></li>
+							<li><a href="sanpham.html">Cửa hàng</a></li>
+                            <li><a href="tintuc.html">Tin tức</a></li>
+                            <li><a href="lienhe.html">Liên hệ</a></li>
+                            <li><a href="Sitemap.html">Sơ đồ trang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                <!-- NOTE: Tra Social Gallery ve lai cot thu 4 cua footer. -->
+                    <div class="footer-box">
+                        <div class="social-gallery-wrapper">
+                            <h2 class="widget-title" style="margin-bottom: 20px;">Social Gallery</h2>
+                            <div class="social-gallery-circle">
+                                <div class="gallery-row">
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/banh-3.jpg" alt="Gallery 1">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/CT-Dua-2.jpg" alt="Gallery 2">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/tn-sm-2.jpg" alt="Gallery 3">
+                                    </a>
+                                </div>
+                                <div class="gallery-row">
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/tn-sm-1.jpg" alt="Gallery 4">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/12/360-1761619620-6885-1761619797.webp" alt="Gallery 5">
+                                    </a>
+                                    <a href="#" class="gallery-circle-item">
+                                        <img src="https://the350f.com/wp-content/uploads/2025/05/HinhAnh-4.jpg" alt="Gallery 6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Bản quyền © 2026 - Donkery. </p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-threads"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+
+    <!-- scripts -->
+    <script src="../Script/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../Script/bootstrap.min.js"></script>
+    <script src="../Script/jquery.countdown.js"></script>
+    <script src="../Script/jquery.isotope-3.0.6.min.js"></script>
+    <script src="../Script/waypoints.js"></script>
+    <script src="../Script/owl.carousel.min.js"></script>
+    <script src="../Script/jquery.magnific-popup.min.js"></script>
+    <script src="../Script/jquery.meanmenu.min.js"></script>
+    <script src="../Script/sticker.js"></script>
+    <script src="../Script/main.js"></script>
+
+</body>
+</html>
